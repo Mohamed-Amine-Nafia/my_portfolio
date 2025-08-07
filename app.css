@@ -188,7 +188,7 @@ header .download {
   background-repeat: no-repeat;
   clip-path: url("#clip");
 }
-/* From Uiverse.io by mooosakhan */
+
 .card {
   width: fit-content;
   height: fit-content;
@@ -222,7 +222,7 @@ header .download {
   background-color: #d62976;
   transition-duration: 0.3s;
 }
-/* twitter*/
+/* github*/
 .containerTwo:hover {
   background-color: #ee2400;
   transition-duration: 0.3s;
@@ -232,7 +232,7 @@ header .download {
   background-color: #0072b1;
   transition-duration: 0.3s;
 }
-/* Whatsapp*/
+/* facebook*/
 .containerFour:hover {
   background-color: #233eda;
   transition-duration: 0.3s;
