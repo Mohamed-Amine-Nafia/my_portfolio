@@ -35,10 +35,8 @@ a {
   color: var(--grey-shade);
 }
 p {
-  font-size: 1.2rem;
   line-height: 1.5;
   font-weight: 400;
-  color: var(--secondary-color);
 }
 .wrapper {
   width: 100%;
@@ -152,11 +150,20 @@ header .download {
   margin-right: 0.3rem;
 }
 .introduction .title {
+  color: transparent;
+  background-image: url("images/title2.png");
+  /* background-repeat: no-repeat;
+  background-size: cover; */
+  background-clip: text;
   font-size: 2.8rem;
   font-family: var(--main-title);
   word-break: keep-all;
   margin: 1.2rem 0 2rem 0;
-  color: var(--grey-shade);
+  animation: titleAnimate 7s linear infinite alternate;
+}
+.introduction p {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
 }
 .contact-btn {
   background-color: var(--main-color);
@@ -170,6 +177,15 @@ header .download {
   transition-property: border-top, border-left, border-bottom, border-right,
     box-shadow;
 }
+@keyframes titleAnimate {
+  from {
+    background-position: 0% center;
+  }
+  to {
+    background-position: 300% center;
+  }
+}
+
 .contact-btn:hover {
   border-top: 2px solid var(--secondary-color);
   border-left: 2px solid var(--secondary-color);
