@@ -181,8 +181,10 @@ header .download {
 
 .my-pic-container {
   flex: 1;
+
   background-image: url("images/happy-man-Photoroom.png");
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
+  clip-path: url("#clip");
 }
