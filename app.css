@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--paragraphs);
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+:root {
+  /*Colors*/
+  --main-color: #e07a5f;
+  --secondary-color: #3d405b;
+  --tertiary-color: #81b29a;
+  --tertiary-shade: #5b8e7d;
+  --tertiary-tint: #d0f4de;
+  --grey: #f8f9fa;
+  --grey-shade: #212529;
+
+  /*Fonts*/
+  --main-title: "Akira Expanded", sans-serif;
+  --secondary-font: "Kaushan Script", cursive;
+  --paragraphs: "Poppins", sans-serif;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--grey);
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  color: var(--grey-shade);
+}
+p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--secondary-color);
+}
+.wrapper {
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+/*HEADER STYLING*/
+header {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+}
+header .logo {
+  width: fit-content;
+  font-family: var(--secondary-font);
+  font-size: 1.4rem;
+  color: var(--grey-shade);
+}
+
+header nav {
+  flex: 1;
+  padding: 0 10rem;
+}
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+nav ul li {
+  background-color: transparent;
+  transition: all 0.4s;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+nav ul li:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 7px 0 -2px var(--tertiary-color),
+    0 15px 0 -4px var(--secondary-color),
+    0 16px 10px -3px var(--secondary-color);
+}
+/*buttons global styling*/
+.btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 22px;
+  font-weight: 500;
+}
+header .download {
+  width: fit-content;
+  text-align: right;
+  background-color: var(--main-color);
+  position: relative;
+  overflow: hidden;
+}
+.download:before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 120%;
+  background-color: var(--secondary-color);
+  top: 50%;
+  transform: skewX(30deg) translate(-150%, -50%);
+  transition: all 0.5s;
+}
+
+.download:hover {
+  background-color: var(--tertiary-color);
+  color: #fff;
+  box-shadow: 0 2px 0 2px var(--secondary-color);
+}
+
+.download:hover::before {
+  transform: skewX(30deg) translate(150%, -50%);
+  transition-delay: 0.1s;
+}
+
+.download:active {
+  transform: scale(0.9);
+}
+/*INTRO SECTION*/
+.intro-section {
+  display: flex;
+  padding: 4rem 4rem;
+  gap: 1rem;
+}
+.introduction {
+  flex: 1;
+}
+.introduction .available {
+  background-color: #e5dbff;
+  color: var(--secondary-color);
+  width: fit-content;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.available span:first-child {
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  background-color: var(--secondary-color);
+  border-radius: 4px;
+  margin-right: 0.3rem;
+}
+.introduction .title {
+  font-size: 2.8rem;
+  font-family: var(--main-title);
+  word-break: keep-all;
+  margin: 1.2rem 0 2rem 0;
+  color: var(--grey-shade);
+}
+.contact-btn {
+  background-color: var(--main-color);
+  margin: 2.5rem 0 0 0;
+  cursor: pointer;
+  border-bottom: 2px solid var(--secondary-color);
+  border-right: 2px solid var(--secondary-color);
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  transition-duration: 1s;
+  transition-property: border-top, border-left, border-bottom, border-right,
+    box-shadow;
+}
+.contact-btn:hover {
+  border-top: 2px solid var(--secondary-color);
+  border-left: 2px solid var(--secondary-color);
+  border-bottom: 2px solid transparent;
+  border-right: 2px solid transparent;
+  box-shadow: rgba(61, 64, 91, 0.4) 5px 5px, rgba(61, 64, 91, 0.3) 10px 10px,
+    rgba(61, 64, 91, 0.2) 15px 15px;
+}
+
+.my-pic-container {
+  flex: 1;
+  background-image: url("images/happy-man-Photoroom.png");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
