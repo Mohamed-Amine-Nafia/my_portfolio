@@ -55,11 +55,25 @@ header {
   border-radius: 8px;
   padding: 0.7rem 1rem;
 }
-header .logo {
-  width: fit-content;
-  font-family: var(--secondary-font);
-  font-size: 1.4rem;
-  color: var(--grey-shade);
+header svg path {
+  fill: transparent;
+  stroke: var(--grey-shade);
+  stroke-width: 2px;
+  stroke-dasharray: 155;
+  stroke-dashoffset: 155;
+  animation: draw 3s ease-in-out 1 forwards;
+}
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 155;
+  }
+  75% {
+    fill: transparent;
+  }
+  100% {
+    fill: var(--grey-shade);
+    stroke-dashoffset: 0;
+  }
 }
 
 header nav {
